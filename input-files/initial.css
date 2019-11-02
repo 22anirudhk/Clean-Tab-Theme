@@ -1,0 +1,53 @@
+* {
+  font-family:"Avenir";
+}
+
+h2 {
+  font-size:30px;
+  text-align:center;
+  margin-top:18%;
+}
+
+#tableDiv {
+  display: inline-block;
+  position: absolute;
+	top:43%;
+	left: 39%;
+}
+
+#myForm {
+  text-align: center;
+}
+
+input {
+  width:188px;
+  font-size:30px;
+}
+
+#submit-button {
+  width:auto;
+  border-color:white;
+  -webkit-transition : border 500ms ease-out;
+  -moz-transition : border 500ms ease-out;
+  -o-transition : border 500ms ease-out;
+  transition : border 500ms ease-out;
+  font-size:20px;
+}
+
+#submit-button:hover {
+  border-bottom : 1px solid gray;
+  -webkit-transition : border 500ms ease-in;
+  -moz-transition : border 500ms ease-in;
+  -o-transition : border 500ms ease-in;
+  transition : border 500ms ease-in;
+}
+
+#submit-button:onclick {
+  border-color = white;
+}
+
+.unstyled::-webkit-inner-spin-button,
+.unstyled::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}

@@ -1,0 +1,43 @@
+* {
+    font-family: Avenir;
+}
+
+#greeting,
+#age-number {
+    text-align: center;
+}
+
+#greeting {
+    margin-top: 320px;
+    font-size: 50px;
+}
+
+#age-header {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 25px;
+    color: gray;
+}
+
+#dayOfWeek {
+    position: absolute;
+    color: gray;
+    font-size: 23px;
+    margin-left: 20px;
+    margin-top: -300px;
+}
+
+#temperature {
+    font-size: 23px;
+    color: gray;
+    position: absolute;
+    top: 5px;
+    right: 23px;
+}
+
+#weather-icon {
+    position: absolute;
+    width: 100px;
+    top: 50px;
+    left: 1240px;
+}
