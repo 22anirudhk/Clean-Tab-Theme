@@ -2,26 +2,28 @@
     font-family: Avenir;
 }
 
-#greeting,
+
 #age-number {
     text-align: center;
+    color:gray;
 }
 
 #greeting {
+    text-align: center;
     margin-top: 320px;
     font-size: 50px;
 }
 
-#age-header {
+/* #age-header {
     text-align: center;
     margin-top: 15px;
     font-size: 25px;
     color: gray;
-}
+} */
 
 #dayOfWeek {
     position: absolute;
-    color: gray;
+    color: orange;
     font-size: 23px;
     margin-left: 20px;
     margin-top: -300px;
@@ -29,7 +31,7 @@
 
 #temperature {
     font-size: 23px;
-    color: gray;
+    color: orange;
     position: absolute;
     top: 5px;
     right: 23px;

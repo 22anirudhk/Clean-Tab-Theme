@@ -53,6 +53,7 @@ function calcTemperature() {
     let proxyurl = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/b26921014111d63c30fef10af3c2b1f1/";
 
     var finalurl = proxyurl + lat + "," + long;
+    console.log(finalurl);
 
     fetch(finalurl)
         .then(response => response.text())
@@ -71,10 +72,13 @@ function calcTemperature() {
 
     function setTemp(str) {
         json = JSON.parse(str).currently["temperature"];
-        temperature.innerHTML = roundTo(json, 1) + "°";
+        
+        temperature.innerHTML = roundTo(json, 1) + "° F";
     }
 
     var x = document.getElementById("demo");
+    console.log("Longitude: " + localStorage["longitude"]);
+    console.log("Latitude: " + localStorage["latitude"]);
 }
 
 function initialize() {
@@ -89,13 +93,15 @@ setInterval(addAge(), 60000);
 setInterval(calcTemperature(), 86400000);
 
 function changeTheme() {
-    if (hour >= 21 || hour <= 5) {
+    if (hour >= 18 || hour <= 5) {
         nightTheme = true;
     }
     if (nightTheme) {
         greeting.style.color = "white";
         age.style.color = "orange";
         document.body.style.background = "#1D1D1D";
+        document.getElementById("temperature").style.color = "gray";
+        document.getElementById("dayOfWeek").style.color = "gray";
     }
 }
 
@@ -144,9 +150,9 @@ function addTime() {
 
 function addAge() {
     if (age.innerText.includes("years")) {
-        age.innerHTML = ((year - inputYear) + Math.round(numDays / 365.25 * 1000) / 1000) + " years";
+        age.innerHTML = ((year - inputYear) + Math.round(numDays / 365.25 * 1000) / 1000) + " years old";
     } else {
-        age.innerHTML += (year - inputYear) + Math.round(numDays / 365.25 * 1000) / 1000 + " years";
+        age.innerHTML += (year - inputYear) + Math.round(numDays / 365.25 * 1000) / 1000 + " years old";
     }
 
 }
