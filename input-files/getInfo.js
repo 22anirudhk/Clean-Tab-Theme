@@ -12,51 +12,58 @@ var inputDay;
 var inputYear;
 var name;
 
+
+
+
 myButton.onclick = function() {
-  inputMonth = parseInt(document.getElementById("input").value.substring(5,7));
-  inputDay = parseInt(document.getElementById("input").value.substring(8, 10));
-  inputYear = parseInt(document.getElementById("input").value.substring(0,4));
 
-  if(inputYear > year || inputYear<(year-100))
-  {
-    linebreak = document.createElement("br");
-    document.getElementById("button-div").appendChild(linebreak);
-    document.getElementById("button-label").innerHTML += "Please enter a valid date."
+    inputMonth = parseInt(document.getElementById("input").value.substring(5,7));
+    inputDay = parseInt(document.getElementById("input").value.substring(8, 10));
+    inputYear = parseInt(document.getElementById("input").value.substring(0,4));
 
-    return;
+    if(inputYear > year || inputYear<(year-100))
+    {
+      linebreak = document.createElement("br");
+      document.getElementById("button-div").appendChild(linebreak);
+      document.getElementById("button-label").innerHTML += "Please enter a valid date."
+
+      return;
+    }
+    else {
+      name = document.getElementById("name").value;
+
+      localStorage["values"] =  document.getElementById("input").value;
+
+
+      if(month === inputMonth && day === inputDay)
+      {
+        daysBetween = 0;
+      }
+      else if(month > inputMonth)
+      {
+        daysBetween = getNumDays(inputMonth, inputDay, year, month, day, year); //act like it's the same year.
+      }
+      else
+      {
+        daysBetween = getNumDays(inputMonth, inputDay, year, month, day, year);
+      }
+
+      numDays = daysBetween;
+
+      localStorage["inputMonth"] = inputMonth;
+      localStorage["inputDay"] = inputDay;
+      localStorage["inputYear"] = inputYear;
+      localStorage["numDays"] = numDays;
+      localStorage["getNumDays"] = getNumDays;
+      localStorage["name"] = name;
+      localStorage["dataEntered"] = true;
+      window.location.href = "main-files/main.html";
+
+      }
   }
-  else {
-    name = document.getElementById("name").value;
 
-    localStorage["values"] =  document.getElementById("input").value;
-
-
-    if(month === inputMonth && day === inputDay)
-    {
-      daysBetween = 0;
-    }
-    else if(month > inputMonth)
-    {
-      daysBetween = getNumDays(inputMonth, inputDay, year, month, day, year); //act like it's the same year.
-    }
-    else
-    {
-      daysBetween = getNumDays(inputMonth, inputDay, year, month, day, year);
-    }
-
-    numDays = daysBetween;
-
-    localStorage["inputMonth"] = inputMonth;
-    localStorage["inputDay"] = inputDay;
-    localStorage["inputYear"] = inputYear;
-    localStorage["numDays"] = numDays;
-    localStorage["getNumDays"] = getNumDays;
-    localStorage["name"] = name;
-    window.location.href = "main-files/main.html";
-
-    }
-
-
+  function changeNightMode() {
+    nightTheme = !nightTime;
   }
 
 

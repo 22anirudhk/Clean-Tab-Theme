@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Clean Tab Theme",
+  "description": "This extension provide an elegant and aesthetic new tab theme.",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "tabs",
+   "geolocation"
+ ],
+
+   "background": {
+     "scripts": ["background.js"]
+   },
+
+   "chrome_url_overrides": {
+      "newtab": "input-files/main-files/main.html"
+    }
+}

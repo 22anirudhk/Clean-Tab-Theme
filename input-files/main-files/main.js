@@ -23,6 +23,26 @@ var temperature = document.getElementById("temperature");
 
 var nightTheme = false;
 
+var dataEntered;
+
+if(localStorage["dataEntered"])
+{
+  dataEntered = true;
+}
+else {
+  dataEntered = false;
+}
+
+
+
+console.log(localStorage["dataEntered"]);
+if(!dataEntered)
+{
+    window.location.href = "../initial.html";
+}
+
+
+
 
 
 initialize();
@@ -72,7 +92,8 @@ function calcTemperature() {
 
     function setTemp(str) {
         json = JSON.parse(str).currently["temperature"];
-        
+        json = json-8; //Works better for some reason.
+
         temperature.innerHTML = roundTo(json, 1) + "° F";
     }
 
