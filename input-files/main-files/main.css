@@ -2,10 +2,15 @@
     font-family: Avenir;
 }
 
-
 #age-number {
     text-align: center;
-    color:gray;
+    color: gray;
+    font-weight: 1000;
+    font-size: 30px;
+}
+
+.post-text {
+    font-size: 22px;
 }
 
 #greeting {
@@ -13,6 +18,7 @@
     margin-top: 320px;
     font-size: 50px;
 }
+
 
 /* #age-header {
     text-align: center;

@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title></title>
-  </head>
-  <body>
-    <h1> Thanks for installing Clean Tab Theme! </h1>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
 
-  </body>
+<!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+
+<body>
+    <div id="everything">
+        <h2 id="options">Options</h2>
+        <br>
+
+        <table id="myTable">
+            <tr>
+                <td>Dark Mode</td>
+                <td>
+                    <label class="switch">
+                      <input id="darkModeSlider" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Age Display Type</td>
+                <td>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                </td>
+            </tr>
+        </table>
+        <br>
+    </div>
+</body>
+
+<script type="text/javascript" src="background.js">
+</script>
+
+
 </html>
+<!-- sup code -->

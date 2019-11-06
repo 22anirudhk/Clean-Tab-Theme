@@ -1,5 +1,7 @@
 var age = document.getElementById("age-number");
 
+console.log("page has loaded. " + localStorage["nightTheme"]);
+
 var today = new Date();
 var month = today.getMonth() + 1; //January is 0
 var day = today.getDate(); //gets the day
@@ -16,33 +18,30 @@ var inputMonth = localStorage["inputMonth"];
 var inputDay = localStorage["inputDay"];
 var numDays = localStorage["numDays"];
 
+var inputDate = new Date(inputYear, inputMonth - 1, inputDay, 0, 0, 0, 0);
+
 var greeting = document.getElementById("greeting");
 var name = localStorage["name"];
 var dayOfWeek = document.getElementById("dayOfWeek");
 var temperature = document.getElementById("temperature");
 
-var nightTheme = false;
+var nightTheme;
 
 var dataEntered;
 
-if(localStorage["dataEntered"])
-{
-  dataEntered = true;
+if (localStorage["dataEntered"]) {
+    dataEntered = true;
+} else {
+    dataEntered = false;
 }
-else {
-  dataEntered = false;
-}
+
 
 
 
 console.log(localStorage["dataEntered"]);
-if(!dataEntered)
-{
+if (!dataEntered) {
     window.location.href = "../initial.html";
 }
-
-
-
 
 
 initialize();
@@ -92,7 +91,7 @@ function calcTemperature() {
 
     function setTemp(str) {
         json = JSON.parse(str).currently["temperature"];
-        json = json-8; //Works better for some reason.
+        json = json - 8; //Works better for some reason.
 
         temperature.innerHTML = roundTo(json, 1) + "° F";
     }
@@ -110,20 +109,30 @@ function initialize() {
     calcTemperature();
 }
 
-setInterval(addAge(), 60000);
-setInterval(calcTemperature(), 86400000);
+setInterval(addAge, 100);
+setInterval(changeTheme, 1000);
+setInterval(calcTemperature, 86400000);
 
 function changeTheme() {
-    if (hour >= 18 || hour <= 5) {
-        nightTheme = true;
-    }
-    if (nightTheme) {
+    nightTheme = localStorage["nightTheme"];
+    // console.log(nightTheme);
+
+    if (nightTheme == "true") {
+        // console.log("FIRST");
         greeting.style.color = "white";
         age.style.color = "orange";
         document.body.style.background = "#1D1D1D";
         document.getElementById("temperature").style.color = "gray";
         document.getElementById("dayOfWeek").style.color = "gray";
+    } else {
+        // console.log("Second");
+        greeting.style.color = "black";
+        age.style.color = "gray";
+        document.body.style.background = "white";
+        document.getElementById("temperature").style.color = "orange";
+        document.getElementById("dayOfWeek").style.color = "orange";
     }
+
 }
 
 //rounding function
@@ -139,9 +148,9 @@ function roundTo(n, digits) {
     }
     var multiplicator = Math.pow(10, digits);
     n = parseFloat((n * multiplicator).toFixed(11));
-    n = (Math.round(n) / multiplicator).toFixed(2);
+    n = (Math.round(n) / multiplicator).toFixed(digits);
     if (negative) {
-        n = (n * -1).toFixed(2);
+        n = (n * -1).toFixed(digits);
     }
     return n;
 }
@@ -170,10 +179,16 @@ function addTime() {
 }
 
 function addAge() {
+    //console.log(inputDate);
+    var ageRaw = (new Date() - inputDate) / (1000 * 60 * 60 * 24 * 365.25);
+    var ageVal = roundTo(ageRaw, 9);
+    let ageStr = "" + ageVal;
     if (age.innerText.includes("years")) {
-        age.innerHTML = ((year - inputYear) + Math.round(numDays / 365.25 * 1000) / 1000) + " years old";
+        age.innerHTML = ageVal + '<span class="post-text"> years old</span>';
+        // age.innerHTML = ((year - inputYear) + Math.round(numDays / 365.25 * 1000) / 1000) + " years old";
     } else {
-        age.innerHTML += (year - inputYear) + Math.round(numDays / 365.25 * 1000) / 1000 + " years old";
+        // age.innerHTML += (year - inputYear) + Math.round(numDays / 365.25 * 1000) / 1000 + " years old";
+        age.innerHTML = ageVal + '<span class="post-text"> years old</span>';
     }
 
 }
