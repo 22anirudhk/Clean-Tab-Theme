@@ -6,7 +6,7 @@ Hi There!
 Here are the instructions(It's quick don't worry):
 
 1. Press the green button called "Clone or Download," then click "Download Zip."
-2. Unzip the zip file.
+2. Unzip the zip file by clicking on it. 
 3. Type "chrome://extensions"
 4. Click "load unpacked"
 5. Select the folder titled "Age-Displayer" that was created after unzipping the zip file
