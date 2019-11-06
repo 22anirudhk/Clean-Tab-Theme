@@ -10,4 +10,4 @@ Just a note: Check the github link once in a while to see if any updates have be
 If you have any suggestions, just email capitalriceusa@gmail.com.
 
 Hope you like it!
-- ani and dix1ts
+-- ani and dix1ts
