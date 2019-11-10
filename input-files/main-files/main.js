@@ -197,7 +197,7 @@ function addAge() {
 
 function changeGreeting() {
     greeting.innerHTML += timeToPartOfDay();
-    greeting.innerHTML += name + ".";
+    greeting.innerHTML += localStorage["name"] + ".";
 }
 
 function timeToPartOfDay() {

@@ -11,8 +11,12 @@ h2 {
 #tableDiv {
   display: inline-block;
   position: absolute;
-	top:43%;
-	left: 39%;
+	top:44%;
+	left: 41.5%;
+}
+
+body {
+  background-color:white;
 }
 
 #myForm {
@@ -43,7 +47,7 @@ input {
 }
 
 #submit-button:onclick {
-  border-color = white;
+  border-color : white;
 }
 
 .unstyled::-webkit-inner-spin-button,
