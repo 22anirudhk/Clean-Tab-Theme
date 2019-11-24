@@ -1,5 +1,5 @@
 # Clean-Tab-Theme
-A chrome extension that provides a clean page when opening a new tab.
+A chrome extension that provides a clean homepage on the new tab screen.
 
 Hi There!
 
