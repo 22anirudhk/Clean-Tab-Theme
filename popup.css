@@ -78,6 +78,11 @@ input:checked+.slider:before {
     transform: translateX(20px);
 }
 
+#myForm {
+    text-align: center;
+  }
+
+
 .slider.round {
     border-radius: 28px;
 }

@@ -14,3 +14,27 @@ window.onload = function() {
         localStorage["nightTheme"] = true;
     }
 }
+
+var mybutton = document.getElementById("reload-button");
+
+mybutton.onclick = function() {
+    var win = window.open("input-files/main-files/main.html", '_blank');
+    win.focus();
+};
+
+
+function checkName() {
+    var popupName = document.getElementById("name-change").value;
+    if(popupName.length > 0)
+    {
+        localStorage["name"] = popupName;
+        console.log("HIIHI");
+    }
+}
+
+setInterval(checkName, 100);
+
+
+
+
+

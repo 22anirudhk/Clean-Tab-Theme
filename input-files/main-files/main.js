@@ -109,6 +109,11 @@ function initialize() {
     calcTemperature();
 }
 
+function changeName() 
+{
+
+}
+
 setInterval(addAge, 100);
 setInterval(changeTheme, 1000);
 setInterval(calcTemperature, 86400000);
@@ -196,8 +201,9 @@ function addAge() {
 
 
 function changeGreeting() {
-    greeting.innerHTML += timeToPartOfDay();
+    greeting.innerHTML = timeToPartOfDay();
     greeting.innerHTML += localStorage["name"] + ".";
+    console.log(localStorage["name"]);
 }
 
 function timeToPartOfDay() {
