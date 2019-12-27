@@ -3,6 +3,11 @@ A chrome extension that provides a clean homepage on the new tab screen.
 
 Hi There!
 
+  ******* ONCE DOWNLOADED, PRESS THE ICON IN THE TOOLBAR TO ACCESS FEATURES LIKE: *************
+  1. background image
+  2. dark/light mode
+  3. changing your name
+
 Here are the instructions(It's quick don't worry):
 
 1. Press the green button called "Clone or Download," then click "Download Zip."
@@ -16,10 +21,7 @@ Thanks for installing Clean Tab Theme.
 
 Two Notes:
 - Check the github link once in a while to see if any updates have been pushed. (Or you can donate some money to help get it on chrome webstore :)
-- If you click the icon in the extension bar, you can toggle some things. 
-
 
 If you have any suggestions, just email capitalriceusa@gmail.com.
 
 Hope you like it!
--- ani and dix1ts
