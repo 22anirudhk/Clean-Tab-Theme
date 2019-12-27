@@ -109,7 +109,7 @@ function initialize() {
     calcTemperature();
 }
 
-function changeName() 
+function changeName()
 {
 
 }
@@ -185,15 +185,21 @@ function addTime() {
 
 function addAge() {
     //console.log(inputDate);
-    var ageRaw = (new Date() - inputDate) / (1000 * 60 * 60 * 24 * 365.25);
-    var ageVal = roundTo(ageRaw, 9);
-    let ageStr = "" + ageVal;
-    if (age.innerText.includes("years")) {
-        age.innerHTML = ageVal + '<span class="post-text"> years old</span>';
-        // age.innerHTML = ((year - inputYear) + Math.round(numDays / 365.25 * 1000) / 1000) + " years old";
-    } else {
-        // age.innerHTML += (year - inputYear) + Math.round(numDays / 365.25 * 1000) / 1000 + " years old";
-        age.innerHTML = ageVal + '<span class="post-text"> years old</span>';
+    if(localStorage.enabledAge)
+    {
+      var ageRaw = (new Date() - inputDate) / (1000 * 60 * 60 * 24 * 365.25);
+      var ageVal = roundTo(ageRaw, 9);
+      let ageStr = "" + ageVal;
+      if (age.innerText.includes("years")) {
+          age.innerHTML = ageVal + '<span class="post-text"> years old</span>';
+          // age.innerHTML = ((year - inputYear) + Math.round(numDays / 365.25 * 1000) / 1000) + " years old";
+      } else {
+          // age.innerHTML += (year - inputYear) + Math.round(numDays / 365.25 * 1000) / 1000 + " years old";
+          age.innerHTML = ageVal + '<span class="post-text"> years old</span>';
+      }
+    }
+    else {
+      document.getElementById("age-number").innerHTML = "";
     }
 
 }

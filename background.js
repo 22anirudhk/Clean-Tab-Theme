@@ -7,11 +7,25 @@ document.getElementById("darkModeSlider").onclick = function() {
     }
     console.log(localStorage["nightTheme"]);
 }
+
+document.getElementById("age-shower").onclick = function() {
+    if (localStorage.nightTheme == "false") {
+        localStorage.enabledAge = true;
+    } else {
+        localStorage.enabledAge = false;
+    }
+    console.log(localStorage["nightTheme"]);
+}
+
 window.onload = function() {
     if (localStorage["nightTheme"] == "true") {
         // console.log("ur ksalk d a");
         document.getElementById("darkModeSlider").click();
         localStorage["nightTheme"] = true;
+    }
+
+    if(localStorage["enabledAge"] == "true") {
+      document.getElementById("age-shower").click();
     }
 }
 
@@ -33,8 +47,3 @@ function checkName() {
 }
 
 setInterval(checkName, 100);
-
-
-
-
-
