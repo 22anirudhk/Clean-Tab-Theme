@@ -28,8 +28,23 @@ input {
   font-size:30px;
 }
 
+#isPCLabel {
+  position:absolute;
+  left: 30%;
+  
+}
+
+#isPC {
+  position:absolute;
+  left: 58%;
+  margin-bottom:30px;
+}
+
+
+
 #submit-button {
   width:auto;
+  margin-top:10%;
   border-color:white;
   -webkit-transition : border 500ms ease-out;
   -moz-transition : border 500ms ease-out;
@@ -55,3 +70,4 @@ input {
     display: none;
     -webkit-appearance: none;
 }
+

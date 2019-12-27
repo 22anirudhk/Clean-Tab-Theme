@@ -12,6 +12,9 @@ var inputDay;
 var inputYear;
 var name;
 
+function initializeSystemVars() {
+    localStorage["isPC"] = "off";
+}
 
 
 
@@ -43,6 +46,8 @@ myButton.onclick = function() {
 
         numDays = daysBetween;
 
+        var isPC = document.getElementById("isPC").checked;
+
         localStorage["inputMonth"] = inputMonth;
         localStorage["inputDay"] = inputDay;
         localStorage["inputYear"] = inputYear;
@@ -50,6 +55,7 @@ myButton.onclick = function() {
         localStorage["getNumDays"] = getNumDays;
         localStorage["name"] = name;
         localStorage["dataEntered"] = true;
+        localStorage["isPC"] = isPC;
         localStorage.nightTheme = false;
         window.location.href = "main-files/main.html";
 

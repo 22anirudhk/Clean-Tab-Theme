@@ -3,8 +3,8 @@
     src: url("AvenirLTStd-Medium.otf"); /* File to be stored at your site */
 }
 
-* {
-    font-family: 'Avenir' !important;
+#myBody {
+    font-family: 'Avenir';
 }
 
 #age-number {

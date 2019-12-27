@@ -102,6 +102,7 @@ function calcTemperature() {
 }
 
 function initialize() {
+    checkIfPC();
     changeGreeting();
     addAge();
     addTime();
@@ -109,9 +110,14 @@ function initialize() {
     calcTemperature();
 }
 
-function changeName()
-{
-
+function checkIfPC() {
+    var everything = document.getElementById("myBody");
+    console.log(localStorage["isPC"]);
+    if(localStorage["isPC"] == "true")
+    {
+        everything.style.fontFamily = "AvenirLTStd-Medium";
+        console.log(everything.style.fontFamily);
+    }
 }
 
 setInterval(addAge, 100);
