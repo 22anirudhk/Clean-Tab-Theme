@@ -19,5 +19,7 @@
 
    "chrome_url_overrides": {
       "newtab": "input-files/main-files/main.html"
-    }
+    },
+    "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'"
+
 }

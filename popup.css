@@ -24,6 +24,14 @@
     border-spacing: 30px;
 }
 
+#upload-file {
+    width:75px;
+}
+
+#image-link, #name-change{
+    background-color: rgb(218, 218, 218);
+}
+
 
 /* Rounded sliders. Credit to W3 Schools for the button! */
 

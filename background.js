@@ -1,31 +1,37 @@
 document.getElementById("darkModeSlider").onclick = function() {
-    console.log(typeof localStorage["nightTheme"]);
     if (localStorage.nightTheme == "false") {
         localStorage.nightTheme = true;
     } else {
         localStorage.nightTheme = false;
     }
-    console.log(localStorage["nightTheme"]);
 }
 
-document.getElementById("age-shower").onclick = function() {
-    if (localStorage.nightTheme == "false") {
-        localStorage.enabledAge = true;
+// document.getElementById("age-shower").onclick = function() {
+//     if (localStorage.enabledAge == "false") {
+//         localStorage.enabledAge = true;
+//     } else {
+//         localStorage.enabledAge = false;
+//     }
+//     console.log(localStorage["nightTheme"]);
+// }
+
+document.getElementById("background-photo-enabled").onclick = function() {
+    if (localStorage.photoEnabled == "false") {
+        localStorage.photoEnabled = true;
     } else {
-        localStorage.enabledAge = false;
+        localStorage.photoEnabled = false;
     }
-    console.log(localStorage["nightTheme"]);
 }
 
 window.onload = function() {
     if (localStorage["nightTheme"] == "true") {
-        // console.log("ur ksalk d a");
         document.getElementById("darkModeSlider").click();
-        localStorage["nightTheme"] = true;
+        localStorage["nightTheme"] = true; //gets reset by onclick method
     }
 
-    if(localStorage["enabledAge"] == "true") {
-      document.getElementById("age-shower").click();
+    if(localStorage["photoEnabled"] == "true") {
+      document.getElementById("background-photo-enabled").click();
+      localStorage["photoEnabled"] = true;
     }
 }
 
@@ -42,8 +48,44 @@ function checkName() {
     if(popupName.length > 0)
     {
         localStorage["name"] = popupName;
-        console.log("HIIHI");
     }
 }
 
+function checkImageLink() {
+    var imageLink = document.getElementById("image-link").value;
+    if(imageLink.length > 0)
+    {
+        localStorage["imageLink"] = imageLink;
+    }
+}
+
+//Doesnt work :(
+// function getImage(input) {
+    
+//     if(localStorage["photoEnabled"] == "true")
+//     {
+//         if (input.files && input.files[0]) {
+//             var reader = new FileReader();
+
+//             reader.onload = function (e) {
+//                 console.log(e.target.result);
+//             };
+
+//             reader.readAsDataURL(input.files[0]);
+//         }
+//     }
+// }
+
+// function imageIsLoaded() { 
+//     alert(this.src);  // blob url
+//     // update width and height ...
+//   }
+
+// var loadFile = function(event) {
+// 	var image = document.getElementById("output");
+// 	image.src = URL.createObjectURL(event.target.files[0]);
+// };
+
 setInterval(checkName, 100);
+setInterval(checkImageLink, 100);
+//getImage(event);

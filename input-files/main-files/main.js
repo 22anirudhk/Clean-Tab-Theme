@@ -91,7 +91,7 @@ function calcTemperature() {
 
     function setTemp(str) {
         json = JSON.parse(str).currently["temperature"];
-        json = json - 8; //Works better for some reason.
+         //json = json-10 sometimes works better for some reason.
 
         temperature.innerHTML = roundTo(json, 1) + "° F";
     }
@@ -110,6 +110,8 @@ function initialize() {
     calcTemperature();
 }
 
+
+
 function checkIfPC() {
     var everything = document.getElementById("myBody");
     console.log(localStorage["isPC"]);
@@ -120,6 +122,8 @@ function checkIfPC() {
     }
 }
 
+
+
 setInterval(addAge, 100);
 setInterval(changeTheme, 1000);
 setInterval(calcTemperature, 86400000);
@@ -127,24 +131,47 @@ setInterval(calcTemperature, 86400000);
 function changeTheme() {
     nightTheme = localStorage["nightTheme"];
     // console.log(nightTheme);
+        
+    if(nightTheme == "true")
+        {
+            greeting.style.color = "white";
+            age.style.color = "orange";
+            document.getElementById("temperature").style.color = "gray";
+            document.getElementById("dayOfWeek").style.color = "gray";
+        }
+        else
+        {
+            greeting.style.color = "black";
+            age.style.color = "gray";
+            document.getElementById("temperature").style.color = "orange";
+            document.getElementById("dayOfWeek").style.color = "orange";
+        }
 
-    if (nightTheme == "true") {
-        // console.log("FIRST");
-        greeting.style.color = "white";
-        age.style.color = "orange";
-        document.body.style.background = "#1D1D1D";
-        document.getElementById("temperature").style.color = "gray";
-        document.getElementById("dayOfWeek").style.color = "gray";
-    } else {
-        // console.log("Second");
-        greeting.style.color = "black";
-        age.style.color = "gray";
-        document.body.style.background = "white";
-        document.getElementById("temperature").style.color = "orange";
-        document.getElementById("dayOfWeek").style.color = "orange";
+    if(localStorage["photoEnabled"] == "false")
+    {
+        if(nightTheme == "true")
+        {
+            document.body.style.background = "#1D1D1D";
+        }
+        else
+        {
+            document.body.style.background = "white";
+        }
+        
+    }
+    else
+    {
+        var link = localStorage["imageLink"]; //check for https?
+        console.log(link);
+        document.getElementById("myBody").style.backgroundImage =  'url('+link+')';//reeeee
     }
 
 }
+
+function returnImageURL() {
+    return localStorage["imageLink"];
+}
+
 
 //rounding function
 //https://stackoverflow.com/questions/15762768/javascript-math-round-to-two-decimal-places
