@@ -1,5 +1,10 @@
 * {
-  font-family:"Avenir";
+  font-family: 'AvenirLTStd-Medium';
+}
+
+@font-face {
+  font-family: 'AvenirLTStd-Medium';
+  src: url("main-files/AvenirLTStd-Medium.otf"); /* File to be stored at your site */
 }
 
 h2 {
