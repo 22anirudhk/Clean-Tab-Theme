@@ -3,7 +3,7 @@ A chrome extension that provides a clean homepage on the new tab screen.
 
 Hi There!
 
-  ******* PRESS THE ICON IN THE TOOLBAR TO ACCESS FEATURES LIKE: *************
+  ******* ONCE DOWNLOADED, PRESS THE ICON IN THE TOOLBAR TO ACCESS FEATURES LIKE: *************
   1. background image
   2. dark/light mode
   3. changing your name
