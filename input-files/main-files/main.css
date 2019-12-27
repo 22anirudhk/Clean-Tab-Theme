@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'AvenirLTStd-Medium';
+    src: url("AvenirLTStd-Medium.otf"); /* File to be stored at your site */
+}
+
 * {
-    font-family: Avenir;
+    font-family: 'Avenir' !important;
 }
 
 #age-number {
