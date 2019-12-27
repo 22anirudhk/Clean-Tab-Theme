@@ -163,13 +163,16 @@ function changeTheme() {
     {
         var link = localStorage["imageLink"]; //check for https?
         console.log(link);
-        document.getElementById("myBody").style.backgroundImage =  'url('+link+')';//reeeee
+        if(link.length == 0 || link.substring(0,1) == " ")
+        {
+            document.getElementById("myBody").style.backgroundImage =  'url(https://hdqwalls.com/download/minimalist-landscape-4k-jt-1440x900.jpg)';//reeeee
+        }
+        else
+        {
+            document.getElementById("myBody").style.backgroundImage =  'url('+link+')';//reeeee
+        }
     }
 
-}
-
-function returnImageURL() {
-    return localStorage["imageLink"];
 }
 
 

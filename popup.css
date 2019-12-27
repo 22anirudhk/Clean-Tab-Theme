@@ -7,8 +7,13 @@
     flex-wrap: wrap;
 }
 
-* {
-    font-family: Avenir;
+@font-face {
+    font-family: 'AvenirLTStd-Medium';
+    src: url("input-files/main-files/AvenirLTStd-Medium.otf"); /* File to be stored at your site */
+}
+
+#myBody {
+    font-family: 'AvenirLTStd-Medium';
     /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch */
 }
 
