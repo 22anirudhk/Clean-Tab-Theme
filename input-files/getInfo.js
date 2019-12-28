@@ -57,6 +57,7 @@ myButton.onclick = function() {
         localStorage["dataEntered"] = true;
         localStorage["isPC"] = isPC;
         localStorage.nightTheme = false;
+        localStorage.photoEnabled = false;
         window.location.href = "main-files/main.html";
 
     }

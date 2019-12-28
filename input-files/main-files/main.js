@@ -25,6 +25,8 @@ var name = localStorage["name"];
 var dayOfWeek = document.getElementById("dayOfWeek");
 var temperature = document.getElementById("temperature");
 
+var tempValue;
+
 var nightTheme;
 
 var dataEntered;
@@ -91,9 +93,9 @@ function calcTemperature() {
 
     function setTemp(str) {
         json = JSON.parse(str).currently["temperature"];
+        tempValue = json;
+        localStorage["tempValue"] = tempValue;
          //json = json-10 sometimes works better for some reason.
-
-        temperature.innerHTML = roundTo(json, 1) + "° F";
     }
 
     var x = document.getElementById("demo");
@@ -102,15 +104,43 @@ function calcTemperature() {
 }
 
 function initialize() {
+    calcTemperature();
+    console.log(tempValue);
+    checkCelsius();
     checkIfPC();
     changeGreeting();
     addAge();
     addTime();
     changeTheme();
-    calcTemperature();
+    
 }
 
+function checkForMyTemp() {
+    if(tempValue === undefined)
+    {
+        return false; // dont go ahead
+    }
+    return true;
+}
 
+function checkCelsius() {
+    if(checkForMyTemp())
+    {
+        if(localStorage["celsiusEnabled"] == "true")
+        {
+            var myTempValue = (tempValue-32) * 5 / 9;
+            temperature.innerHTML = roundTo(myTempValue, 1) + "° C";
+        }
+        else
+        {
+            temperature.innerHTML = roundTo(tempValue, 1) + "° F";
+        }
+    }
+    else
+    {
+        console.log("Im not in")
+    }
+}
 
 function checkIfPC() {
     var everything = document.getElementById("myBody");
@@ -126,6 +156,7 @@ function checkIfPC() {
 
 setInterval(addAge, 100);
 setInterval(changeTheme, 1000);
+setInterval(checkCelsius, 100);
 setInterval(calcTemperature, 86400000);
 
 function changeTheme() {

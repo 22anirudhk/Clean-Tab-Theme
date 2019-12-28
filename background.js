@@ -23,6 +23,16 @@ document.getElementById("background-photo-enabled").onclick = function() {
     }
 }
 
+document.getElementById("celsius-enabled").onclick = function() {
+    if (localStorage.celsiusEnabled == "false") {
+        localStorage.celsiusEnabled = true;
+    } else {
+        localStorage.celsiusEnabled = false;
+    }
+}
+
+
+
 
 
 window.onload = function() {
@@ -34,6 +44,11 @@ window.onload = function() {
     if(localStorage["photoEnabled"] == "true") {
       document.getElementById("background-photo-enabled").click();
       localStorage["photoEnabled"] = true;
+    }
+
+    if (localStorage["celsiusEnabled"] == "true") {
+        document.getElementById("celsius-enabled").click();
+        localStorage["celsiusEnabled"] = true; //gets reset by onclick method
     }
 }
 
