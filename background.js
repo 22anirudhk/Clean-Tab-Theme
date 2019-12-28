@@ -1,10 +1,43 @@
-document.getElementById("darkModeSlider").onclick = function() {
-    if (localStorage.nightTheme == "false") {
-        localStorage.nightTheme = true;
-    } else {
-        localStorage.nightTheme = false;
+
+if(document.getElementById("darkModeSlider") != null)
+{
+    document.getElementById("darkModeSlider").onclick = function() {
+        if (localStorage.nightTheme == "false") {
+            localStorage.nightTheme = true;
+        } else {
+            localStorage.nightTheme = false;
+        }
     }
+    document.getElementById("celsius-enabled").onclick = function() {
+        if (localStorage.celsiusEnabled == "false") {
+            localStorage.celsiusEnabled = true;
+        } else {
+            localStorage.celsiusEnabled = false;
+        }
+    }
+    document.getElementById("reload-button").onclick = function() {
+        var win = window.open("input-files/main-files/main.html", '_blank');
+        win.focus();
+    };
+    
+    function checkName() {
+        var popupName = document.getElementById("name-change").value;
+        if(popupName.length > 0)
+        {
+            localStorage["name"] = popupName;
+        }
+    }
+    
+    function checkImageLink() {
+        var imageLink = document.getElementById("image-link").value;
+        if(imageExists(imageLink))
+        {
+            localStorage["imageLink"] = imageLink;
+        }
+    }
+    
 }
+
 
 // document.getElementById("age-shower").onclick = function() {
 //     if (localStorage.enabledAge == "false") {
@@ -15,21 +48,9 @@ document.getElementById("darkModeSlider").onclick = function() {
 //     console.log(localStorage["nightTheme"]);
 // }
 
-document.getElementById("background-photo-enabled").onclick = function() {
-    if (localStorage.photoEnabled == "false") {
-        localStorage.photoEnabled = true;
-    } else {
-        localStorage.photoEnabled = false;
-    }
-}
 
-document.getElementById("celsius-enabled").onclick = function() {
-    if (localStorage.celsiusEnabled == "false") {
-        localStorage.celsiusEnabled = true;
-    } else {
-        localStorage.celsiusEnabled = false;
-    }
-}
+
+
 
 
 
@@ -52,29 +73,8 @@ window.onload = function() {
     }
 }
 
-var mybutton = document.getElementById("reload-button");
-
-mybutton.onclick = function() {
-    var win = window.open("input-files/main-files/main.html", '_blank');
-    win.focus();
-};
 
 
-function checkName() {
-    var popupName = document.getElementById("name-change").value;
-    if(popupName.length > 0)
-    {
-        localStorage["name"] = popupName;
-    }
-}
-
-function checkImageLink() {
-    var imageLink = document.getElementById("image-link").value;
-    if(imageExists(imageLink))
-    {
-        localStorage["imageLink"] = imageLink;
-    }
-}
 
 //Doesnt work :(
 // function getImage(input) {

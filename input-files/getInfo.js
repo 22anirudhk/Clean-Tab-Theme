@@ -19,6 +19,7 @@ function initializeSystemVars() {
 
 
 myButton.onclick = function() {
+    localStorage.clear();
 
     inputMonth = parseInt(document.getElementById("input").value.substring(5, 7));
     inputDay = parseInt(document.getElementById("input").value.substring(8, 10));
