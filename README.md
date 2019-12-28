@@ -7,6 +7,14 @@ Hi There!
   1. background image
   2. dark/light mode
   3. changing your name
+  
+ <a href="https://ibb.co/dgBWmt7"><img src="https://i.ibb.co/nCrgPBR/Background-Test.png" alt="Background-Test" border="0"></a>
+ 
+<a href="https://ibb.co/RgCNC8X"><img src="https://i.ibb.co/0nfKf50/Dark-Mode-Test.png" alt="Dark-Mode-Test" border="0"></a>
+
+<a href="https://ibb.co/gTYFGj8"><img src="https://i.ibb.co/Z8913Lr/Light-Mode-Test.png" alt="Light-Mode-Test" border="0"></a>
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/y5Bhdw5/Screen-Shot-2019-12-28-at-8-08-06-AM.png" alt="Screen-Shot-2019-12-28-at-8-08-06-AM" border="0"></a>
 
 Here are the instructions(It's quick don't worry):
 
@@ -19,7 +27,7 @@ Here are the instructions(It's quick don't worry):
 
 Thanks for installing Clean Tab Theme.
 
-Two Notes:
+Note:
 - Check the github link once in a while to see if any updates have been pushed. (Or you can donate some money to help get it on chrome webstore :)
 
 If you have any suggestions, just email capitalriceusa@gmail.com.
