@@ -23,6 +23,8 @@ document.getElementById("background-photo-enabled").onclick = function() {
     }
 }
 
+
+
 window.onload = function() {
     if (localStorage["nightTheme"] == "true") {
         document.getElementById("darkModeSlider").click();
@@ -53,7 +55,7 @@ function checkName() {
 
 function checkImageLink() {
     var imageLink = document.getElementById("image-link").value;
-    if(imageLink.length > 0)
+    if(imageExists(imageLink))
     {
         localStorage["imageLink"] = imageLink;
     }
@@ -89,3 +91,23 @@ function checkImageLink() {
 setInterval(checkName, 100);
 setInterval(checkImageLink, 100);
 //getImage(event);
+
+
+
+
+//By  Felipe Oriani 
+function imageExists(url){
+
+    var image = new Image();
+
+    image.src = url;
+
+    if (!image.complete) {
+        return false;
+    }
+    else if (image.height === 0) {
+        return false;
+    }
+
+    return true;
+}

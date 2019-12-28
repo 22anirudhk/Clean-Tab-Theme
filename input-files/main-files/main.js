@@ -163,7 +163,7 @@ function changeTheme() {
     {
         var link = localStorage["imageLink"]; //check for https?
         console.log(link);
-        if(link.length == 0 || link.substring(0,1) == " ")
+        if(!imageExists(link))
         {
             document.getElementById("myBody").style.backgroundImage =  'url(https://hdqwalls.com/download/minimalist-landscape-4k-jt-1440x900.jpg)';//reeeee
         }
@@ -229,6 +229,25 @@ function addAge() {
       
     
 
+}
+
+
+
+//By  Felipe Oriani 
+function imageExists(url){
+
+    var image = new Image();
+
+    image.src = url;
+
+    if (!image.complete) {
+        return false;
+    }
+    else if (image.height === 0) {
+        return false;
+    }
+
+    return true;
 }
 
 
