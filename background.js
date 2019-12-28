@@ -1,6 +1,4 @@
 
-if(document.getElementById("darkModeSlider") != null)
-{
     document.getElementById("darkModeSlider").onclick = function() {
         if (localStorage.nightTheme == "false") {
             localStorage.nightTheme = true;
@@ -15,6 +13,16 @@ if(document.getElementById("darkModeSlider") != null)
             localStorage.celsiusEnabled = false;
         }
     }
+
+    document.getElementById("background-photo-enabled").onclick = function() {
+        console.log("IM IN");
+        if (localStorage["photoEnabled"] == "false") {
+            localStorage["photoEnabled"] = true;
+        } else {
+            localStorage["photoEnabled"] = false;
+        }
+    }
+
     document.getElementById("reload-button").onclick = function() {
         var win = window.open("input-files/main-files/main.html", '_blank');
         win.focus();
@@ -30,13 +38,9 @@ if(document.getElementById("darkModeSlider") != null)
     
     function checkImageLink() {
         var imageLink = document.getElementById("image-link").value;
-        if(imageExists(imageLink))
-        {
-            localStorage["imageLink"] = imageLink;
-        }
+        localStorage["imageLink"] = imageLink;
     }
     
-}
 
 
 // document.getElementById("age-shower").onclick = function() {
@@ -47,12 +51,6 @@ if(document.getElementById("darkModeSlider") != null)
 //     }
 //     console.log(localStorage["nightTheme"]);
 // }
-
-
-
-
-
-
 
 
 
@@ -105,8 +103,6 @@ window.onload = function() {
 
 setInterval(checkName, 100);
 setInterval(checkImageLink, 100);
-//getImage(event);
-
 
 
 
