@@ -190,7 +190,9 @@ function changeTheme() {
     {
         var link = localStorage["imageLink"]; //check for https?
         console.log("Link of image: " + link);
-        if(link == "" || !imageExists(link))
+
+        if(link == "" && localStorage[""])
+        if((link == "" || !imageExists(link)))
         {
             document.getElementById("myBody").style.backgroundImage =  'url(https://hdqwalls.com/download/minimalist-landscape-4k-jt-1440x900.jpg)';//reeeee
         }

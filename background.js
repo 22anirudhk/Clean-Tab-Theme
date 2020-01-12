@@ -47,7 +47,11 @@
     
     function checkImageLink() {
         var imageLink = document.getElementById("image-link").value;
-        localStorage["imageLink"] = imageLink;
+
+        if(imageLink != "")
+        {
+            localStorage["imageLink"] = imageLink;
+        }
     }
     
 
