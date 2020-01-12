@@ -36,6 +36,12 @@
         var win = window.open("input-files/main-files/main.html", '_blank');
         win.focus();
     };
+
+    document.getElementById("reset-background-button").onclick = function() {
+        localStorage["imageLink"] = "";
+        var win = window.open("input-files/main-files/main.html", '_blank');
+        win.focus();
+    };
     
     function checkName() {
         var popupName = document.getElementById("name-change").value;
