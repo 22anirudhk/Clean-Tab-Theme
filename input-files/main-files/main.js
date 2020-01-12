@@ -1,6 +1,6 @@
 var age = document.getElementById("age-number");
 
-console.log("page has loaded. " + localStorage["nightTheme"]);
+console.log("Page has loaded.");
 
 var today = new Date();
 var month = today.getMonth() + 1; //January is 0
@@ -39,8 +39,6 @@ if (localStorage["dataEntered"]) {
 
 
 
-
-console.log(localStorage["dataEntered"]);
 if (!dataEntered) {
     window.location.href = "../initial.html";
 }
@@ -87,7 +85,7 @@ function calcTemperature() {
     }
 
     function error(pos) {
-        console.log("bruh");
+        console.log("There seems to be an error with the temperature.");
         return "";
     }
 
@@ -136,15 +134,11 @@ function checkCelsius() {
             temperature.innerHTML = roundTo(tempValue, 1) + "° F";
         }
     }
-    else
-    {
-        console.log("Im not in")
-    }
 }
 
 function checkIfPC() {
     var everything = document.getElementById("myBody");
-    console.log(localStorage["isPC"]);
+    console.log("Is PC?" + localStorage["isPC"]);
     if(localStorage["isPC"] == "true")
     {
         everything.style.fontFamily = "AvenirLTStd-Medium";
@@ -193,7 +187,7 @@ function changeTheme() {
     else
     {
         var link = localStorage["imageLink"]; //check for https?
-        console.log(link);
+        console.log("Link of image: " + link);
         if(link == "" || !imageExists(link))
         {
             document.getElementById("myBody").style.backgroundImage =  'url(https://hdqwalls.com/download/minimalist-landscape-4k-jt-1440x900.jpg)';//reeeee
@@ -286,7 +280,7 @@ function imageExists(url){
 function changeGreeting() {
     greeting.innerHTML = timeToPartOfDay();
     greeting.innerHTML += localStorage["name"] + ".";
-    console.log(localStorage["name"]);
+    console.log("Name: " + localStorage["name"]);
 }
 
 function timeToPartOfDay() {

@@ -15,7 +15,6 @@
     }
 
     document.getElementById("background-photo-enabled").onclick = function() {
-        console.log("IM IN");
         if (localStorage["photoEnabled"] == "false") {
             localStorage["photoEnabled"] = true;
         } else {
