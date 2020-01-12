@@ -14,6 +14,8 @@ var name;
 
 function initializeSystemVars() {
     localStorage["isPC"] = "off";
+    localStorage["ageEnabled"] = true;
+
 }
 
 

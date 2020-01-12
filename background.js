@@ -14,11 +14,21 @@
         }
     }
 
+    
+
     document.getElementById("background-photo-enabled").onclick = function() {
         if (localStorage["photoEnabled"] == "false") {
             localStorage["photoEnabled"] = true;
         } else {
             localStorage["photoEnabled"] = false;
+        }
+    }
+
+    document.getElementById("age-enabled").onclick = function() {
+        if (localStorage["ageEnabled"] == "false") {
+            localStorage["ageEnabled"] = true;
+        } else {
+            localStorage["ageEnabled"] = false;
         }
     }
 
@@ -67,6 +77,12 @@ window.onload = function() {
     if (localStorage["celsiusEnabled"] == "true") {
         document.getElementById("celsius-enabled").click();
         localStorage["celsiusEnabled"] = true; //gets reset by onclick method
+    }
+
+    if(localStorage["ageEnabled"] == "true")
+    {
+        document.getElementById("age-enabled").click();
+        this.localStorage["ageEnabled"] = true;
     }
 }
 

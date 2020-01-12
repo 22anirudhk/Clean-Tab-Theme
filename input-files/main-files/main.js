@@ -136,6 +136,7 @@ function checkCelsius() {
     }
 }
 
+
 function checkIfPC() {
     var everything = document.getElementById("myBody");
     console.log("Is PC?" + localStorage["isPC"]);
@@ -152,6 +153,7 @@ setInterval(addAge, 100);
 setInterval(changeTheme, 1000);
 setInterval(checkCelsius, 100);
 setInterval(calcTemperature, 86400000);
+
 
 function changeTheme() {
     nightTheme = localStorage["nightTheme"];
@@ -247,13 +249,18 @@ function addTime() {
 function addAge() {
     //console.log(inputDate);
     
-      var ageRaw = (new Date() - inputDate) / (1000 * 60 * 60 * 24 * 365.25);
-      var ageVal = roundTo(ageRaw, 9);
-      let ageStr = "" + ageVal;
-      age.innerHTML = ageVal + '<span class="post-text"> years old</span>';
+    if(localStorage["ageEnabled"] == "true")
+    {
+        var ageRaw = (new Date() - inputDate) / (1000 * 60 * 60 * 24 * 365.25);
+        var ageVal = roundTo(ageRaw, 9);
+        let ageStr = "" + ageVal;
+        age.innerHTML = ageVal + '<span class="post-text"> years old</span>';
+    }
+    else
+    {
+        age.innerHTML = "";
+    }
       
-    
-
 }
 
 
