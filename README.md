@@ -30,6 +30,6 @@ Thanks for installing Clean Tab Theme.
 Note:
 - Check the github link once in a while to see if any updates have been pushed. (Or you can donate some money to help get it on chrome webstore :)
 
-If you have any suggestions, just email capitalriceusa@gmail.com.
+If you have any suggestions, just email me.
 
 Hope you like it!
