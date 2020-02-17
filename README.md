@@ -13,6 +13,13 @@ It's a chrome extension that provides a clean homepage on the new tab screen.
   4. celsius scale
   5. toggling the age displayer
   
+## Features:
+* Customizable background
+* Dynamic age displayer (toggleable)
+* Location-based temperature (celsius too)
+* Dynamic welcome message
+* Useful toggles within a toolbar
+  
 ## Here Are Some Pictures:
  <a href="https://ibb.co/dgBWmt7"><img src="https://i.ibb.co/nCrgPBR/Background-Test.png" alt="Background-Test" border="0"></a>
  
