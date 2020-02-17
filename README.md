@@ -7,6 +7,8 @@ Hi There!
   1. background image
   2. dark/light mode
   3. changing your name
+  4. celsius scale
+  5. toggling the age displayer
   
  <a href="https://ibb.co/dgBWmt7"><img src="https://i.ibb.co/nCrgPBR/Background-Test.png" alt="Background-Test" border="0"></a>
  
