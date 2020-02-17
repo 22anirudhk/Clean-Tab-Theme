@@ -1,15 +1,19 @@
 # Clean-Tab-Theme
-A chrome extension that provides a clean homepage on the new tab screen.
 
-Hi There!
+Welcome. 
 
-  ******* ONCE DOWNLOADED, PRESS THE ICON IN THE TOOLBAR TO ACCESS FEATURES LIKE: *************
+## What is this?
+It's a chrome extension that provides a clean homepage on the new tab screen.
+
+## Important Note for Users:
+  ONCE DOWNLOADED, PRESS THE ICON IN THE TOOLBAR TO ACCESS FEATURES LIKE:
   1. background image
   2. dark/light mode
   3. changing your name
   4. celsius scale
   5. toggling the age displayer
   
+## Here are some examples:
  <a href="https://ibb.co/dgBWmt7"><img src="https://i.ibb.co/nCrgPBR/Background-Test.png" alt="Background-Test" border="0"></a>
  
 <a href="https://ibb.co/RgCNC8X"><img src="https://i.ibb.co/0nfKf50/Dark-Mode-Test.png" alt="Dark-Mode-Test" border="0"></a>
@@ -18,7 +22,7 @@ Hi There!
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/y5Bhdw5/Screen-Shot-2019-12-28-at-8-08-06-AM.png" alt="Screen-Shot-2019-12-28-at-8-08-06-AM" border="0"></a>
 
-Here are the instructions(It's quick don't worry):
+## Instructions: 
 
 1. Press the green button called "Clone or Download," then click "Download Zip."
 2. Unzip the zip file by clicking on it. 
@@ -29,7 +33,7 @@ Here are the instructions(It's quick don't worry):
 
 Thanks for installing Clean Tab Theme.
 
-Note:
+# Another Note:
 - Check the github link once in a while to see if any updates have been pushed. (Or you can donate some money to help get it on chrome webstore :)
 
 If you have any suggestions, just email me.
