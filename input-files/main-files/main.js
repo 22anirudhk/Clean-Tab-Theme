@@ -93,6 +93,7 @@ function calcTemperature() {
         json = JSON.parse(str).currently["temperature"];
         tempValue = json;
         localStorage["tempValue"] = tempValue;
+        checkCelsius();
          //json = json-10 sometimes works better for some reason.
     }
 
