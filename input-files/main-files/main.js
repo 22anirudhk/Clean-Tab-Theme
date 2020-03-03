@@ -103,7 +103,6 @@ function calcTemperature() {
 
 function initialize() {
     calcTemperature();
-    console.log(tempValue);
     checkCelsius();
     checkIfPC();
     changeGreeting();
@@ -189,7 +188,7 @@ function changeTheme() {
     else
     {
         var link = localStorage["imageLink"]; //check for https?
-        console.log("Link of image: " + link);
+        // console.log("Link of image: " + link);
 
 
         if(localStorage["imageLink"] == ""  && (link == "" || !imageExists(link)))
