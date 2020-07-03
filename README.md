@@ -21,13 +21,13 @@ It's a chrome extension that provides a clean homepage on the new tab screen.
 * Useful toggles within a toolbar
   
 ## Here Are Some Pictures:
- <a href="https://ibb.co/dgBWmt7"><img src="https://i.ibb.co/nCrgPBR/Background-Test.png" alt="Background-Test" border="0"></a>
+ <a href="Images/Background-Test.png"><img src="Images/Background-Test.png" alt="Background-Test" border="0"></a>
  
-<a href="https://ibb.co/RgCNC8X"><img src="https://i.ibb.co/0nfKf50/Dark-Mode-Test.png" alt="Dark-Mode-Test" border="0"></a>
+<a href="Images/Dark-Mode-Test.png"><img src="Images/Dark-Mode-Test.png" alt="Dark-Mode-Test" border="0"></a>
 
-<a href="https://ibb.co/gTYFGj8"><img src="https://i.ibb.co/Z8913Lr/Light-Mode-Test.png" alt="Light-Mode-Test" border="0"></a>
+<a href="Images/Light-Mode-Test.png"><img src="Images/Light-Mode-Test.png" alt="Light-Mode-Test" border="0"></a>
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/y5Bhdw5/Screen-Shot-2019-12-28-at-8-08-06-AM.png" alt="Screen-Shot-2019-12-28-at-8-08-06-AM" border="0"></a>
+<a href="Images/Options-Popup.png"><img src="Images/Options-Popup.png" alt="Screen-Shot-2019-12-28-at-8-08-06-AM" border="0"></a>
 
 ## Instructions: 
 
